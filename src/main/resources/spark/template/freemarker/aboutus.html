@@ -9,7 +9,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head
 		content must come *after* these tags -->
 
-		<title>Car World</title>
+		<title>About Us</title>
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
@@ -38,15 +38,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img class="img-circle" src="img/logo.jpg" alt="logo" height=30 width=61></a>
+					<a class="navbar-brand" href="/"><img class="img-circle" src="img/logo.jpg" alt="logo" height=30 width=61></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
-						</li>
 						<li>
-							<a href="/aboutus"><span class="glyphicon glyphicon-info-sign"
+							<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+						</li>
+						<li class="active">
+							<a href="#"><span class="glyphicon glyphicon-info-sign"
 							aria-hidden="true"></span> About</a>
 						</li>
 						<li>
@@ -115,7 +115,7 @@
 						<h4 class="modal-title">Register </h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" role="form" action="register.java" method="POST">
+						<form class="form-horizontal" role="form" action="register.php" method="POST">
 							<!-- full name input -->
 							<div class="form-group">
 								<label for="fullname" class="col-sm-3 control-label">Full Name</label>
@@ -359,281 +359,210 @@
 		</header>
 
 		<div class="container">
-			<nav class="navbar navbar-inverse" role="search">
-				<form class="form-inline" role="search" action="search.java" method="POST">
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="make">
-							<option value="">Make</option>
-							<option value="BMW">BMW</option>
-							<option value="Hyundai">Hyundai</option>
-						</select>
+			<div class="row">
+				<div class="col-xs-12 col-sm-10">
+					<div class="row">
+						<div class="col-xs-12">
+							<h1 class="page-header">Portfolio Item <small>Subheading</small></h1>
+							<ul class="breadcrumb">
+								<li>
+									<a href="/">Home</a>
+								</li>
+								<li class="active">
+									About Us
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-12">
+							<h3>About Us</h3>
+							<hr>
+						</div>
 					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="model">
-							<option value="">Model</option>
-							<option value="525I">525I</option>
-							<option value="325I">325I</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="year">
-							<option value="">Year</option>
-							<option value="2014">2014</option>
-							<option value="2015">2015</option>
-							<option value="2016">2016</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="price">
-							<option value="">Price</option>
-							<option value="1"> 5000</option>
-							<option value="2">5001 - 10,000</option>
-							<option value="3">10,001 - 15,000</option>
-							<option value="4">15,001 - 20,000</option>
-							<option value="5">20,001 - 25,000</option>
-							<option value="6">25,001 - 30,000</option>
-							<option value="7">30,001 - 35,000</option>
-							<option value="8">35,001 - 40,000</option>
-							<option value="9">40,001 - 45,000</option>
-							<option value="10">45,001 - 50,000</option>
-							<option value="11">50,001 - 55,000</option>
-							<option value="12">55,001 - 60,000</option>
-							<option value="13">60,001 - 65,000</option>
-							<option value="14">65,001 - 70,000</option>
-							<option value="15">70,001 - 75,000</option>
-							<option value="16">75,001 - 80,000</option>
-							<option value="17">80,001 - 85,000</option>
-							<option value="18">85,001 - 90,000</option>
-							<option value="19">90,001 - 95,000</option>
-							<option value="20">95,001 - 100,000</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="region">
-							<option value="">Region</option>
-							<option value="Pittsburgh">Pittsburgh</option>
-							<option value="San Diego">San Diego</option>
-							<option value="New York City">New York City</option>
-							<option value="Atlanta">Atlanta</option>
-						</select>
-					</div>
-					<button type="submit" class="btn btn-info col-xs-12 col-sm-2">
-						Search
-					</button>
-				</form>
-			</nav>
-		</div>
 
-		<div class="container">
-			<div class="row row-content">
-				<div class="col-xs-12">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#mycarousel" data-slide-to="1"></li>
-							<li data-target="#mycarousel" data-slide-to="2"></li>
-						</ol>
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
-							<div class="item active">
-								<img class="img-responsive"
-								src="img/slide1.jpg" alt="Uthappizza">
-								<div class="carousel-caption">
-									<h2>Uthappizza <span class="label label-danger">Hot</span><span class="badge">$4.99</span></h2>
+					<div id="history" class="row row-content">
+						<div class="col-xs-12 col-sm-6 col-lg-8">
+							<h2>Our History</h2>
+							<p>
+								Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.
+							</p>
+							<p>
+								The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.
+							</p>
+							<div class="well">
+								<blockquote>
 									<p>
-										A unique combination of Indian Uthappam (pancake) and
-										Italian pizza, topped with Cerignola olives, ripe vine
-										cherry tomatoes, Vidalia onion, Guntur chillies and
-										Buffalo Paneer.
+										You better cut the pizza in four pieces because
+										I'm not hungry enough to eat six.
 									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-responsive"
-								src="img/slide2.jpg" alt="buffet">
-								<div class="carousel-caption">
-									<h2>Weekend Grand Buffet <span class="label label-danger label-xs">New</span></h2>
-									<p>
-										Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
-									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
-							</div>
-							<div class="item">
-								<img class="img-responsive"
-								src="/img/slide3.jpg" alt="Alberto Somayya">
-								<div class="carousel-caption">
-									<h2>Alberto Somayya</h2>
-									<h4>Executive Chef</h4>
-									<p>
-										Award winning three-star Michelin chef with wide
-										International experience having worked closely with
-										whos-who in the culinary world, he specializes in
-										creating mouthwatering Indo-Italian fusion experiences.
-									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
+									<footer>
+										Yogi Berra, <cite>The Wit and Wisdom of Yogi Berra,
+											P. Pepe, Diversion Books, 2014</cite>
+									</footer>
+								</blockquote>
 							</div>
 						</div>
-						<!-- Controls -->
-						<a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
-						<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-						<div class="btn-group" id="carouselButtons">
-							<button class="btn btn-danger btn-xs" id="carousel-pause">
-								<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-							</button>
-							<button class="btn btn-danger btn-xs" id="carousel-play">
-								<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-							</button>
+						<div  class="col-xs-12 col-sm-6 col-lg-4">
+							<div class="panel panel-primary">
+								<div class="panel-heading">
+									<h3 class="panel-title">Facts At a Glance</h3>
+								</div>
+								<div class="panel-body">
+									<dl class="dl-horizontal">
+										<dt>
+											Started
+										</dt>
+										<dd>
+											3 Feb. 2013
+										</dd>
+										<dt>
+											Major Stake Holder
+										</dt>
+										<dd>
+											HK Fine Foods Inc.
+										</dd>
+										<dt>
+											Last Year's Turnover
+										</dt>
+										<dd>
+											$1,250,375
+										</dd>
+										<dt>
+											Employees
+										</dt>
+										<dd>
+											40
+										</dd>
+									</dl>
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<div id="corporate" class="row row-content">
+						<div class="col-xs-12">
+							<h2>Corporate Leadership</h2>
+							<div class="panel-group" id="accordion"
+							role="tablist" aria-multiselectable="true">
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingPeter">
+										<h3 class="panel-title"><a role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#peter"
+										aria-expanded="true" aria-controls="peter"> Peter Pan <small>Chief Epicurious Officer</small></a></h3>
+									</div>
+									<div role="tabpanel" class="panel-collapse collapse in"
+									id="peter"    aria-labelledby="headingPeter">
+										<div class="panel-body">
+											<p>
+												Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingDanny">
+										<h3 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#danny"
+										aria-expanded="false" aria-controls="danny"> Dhanasekaran Witherspoon <small>Chief Food Officer</small></a></h3>
+									</div>
+									<div role="tabpanel" class="panel-collapse collapse"
+									id="danny"    aria-labelledby="headingDanny">
+										<div class="panel-body">
+											<p>
+												Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingAgumbe">
+										<h3 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#agumbe"
+										aria-expanded="false" aria-controls="agumbe"> Agumbe Tang <small>Chief Taste Officer</small></a></h3>
+									</div>
+									<div role="tabpanel" class="panel-collapse collapse"
+									id="agumbe"    aria-labelledby="headingAgumbe">
+										<div class="panel-body">
+											<p>
+												Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="headingAlberto">
+										<h3 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse"
+										data-parent="#accordion" href="#alberto"
+										aria-expanded="false" aria-controls="alberto"> Alberto Somayya <small>Executive Chef</small></a></h3>
+									</div>
+									<div role="tabpanel" class="panel-collapse collapse"
+									id="alberto"    aria-labelledby="headingAlberto">
+										<div class="panel-body">
+											<p>
+												Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="facts" class="row row-content">
+						<div class="col-xs-12">
+							<h2>Facts &amp; Figures</h2>
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<tr>
+										<td>&nbsp;</td>
+										<th>2013</th>
+										<th>2014</th>
+										<th>2015</th>
+									</tr>
+									<tr>
+										<th>Employees</th>
+										<td>15</td>
+										<td>30</td>
+										<td>40</td>
+									</tr>
+									<tr>
+										<th>Guests Served</th>
+										<td>15000</td>
+										<td>45000</td>
+										<td>100,000</td>
+									</tr>
+									<tr>
+										<th>Special Events</th>
+										<td>3</td>
+										<td>20</td>
+										<td>45</td>
+									</tr>
+									<tr>
+										<th>Annual Turnover</th>
+										<td>$251,325</td>
+										<td>$1,250,375</td>
+										<td>~$3,000,000</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					</div>
+
 				</div>
+				<nav class="hidden-xs col-sm-2" id="myScrollspy">
+					<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="400">
+						<li>
+							<a href="#history">Our History</a>
+						</li>
+						<li>
+							<a href="#corporate">Corporate</a>
+						</li>
+						<li>
+							<a href="#facts">Facts</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-
-			<div class="row row-content">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">Browse By Categories</h3>
-					</div>
-					<div class="panel-body">
-						<ul class="nav nav-pills nav-justified">
-							<li class="active">
-								<a data-toggle="tab" href="#home">Make</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu2">Body Type</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu3">Year</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu4">Price</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu5">Region</a>
-							</li>
-						</ul>
-
-						<div class="tab-content">
-							<div id="home" class="tab-pane fade in active">
-								<div class="table-responsive">
-									<table class="table table-striped" name="make">
-										<tr>
-											<th><a href="browse.java?make=Acura">Acura</a></th>
-											<th><a href="browse.java?make=BMW">BMW</a></th>
-											<th><a href="browse.java?make=Cadillac">Cadillac</a></th>
-											<th><a href="browse.java?make=Chevrolet">Chevrolet</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Chrysler">Chrysler</a></th>
-											<th><a href="browse.java?make=Dodge">Dodge</a></th>
-											<th><a href="browse.java?make=Ford">Ford</a></th>
-											<th><a href="browse.java?make=GMC">GMC</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Honda">Honda</a></th>
-											<th><a href="browse.java?make=Hyundai">Hyundai</a></th>
-											<th><a href="browse.java?make=Infiniti">Infiniti</a></th>
-											<th><a href="browse.java?make=Kia">Kia</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Lexus">Lexus</a></th>
-											<th><a href="browse.java?make=Lincoln">Lincoln</a></th>
-											<th><a href="browse.java?make=Mazda">Mazda</a></th>
-											<th><a href="browse.java?make=Mercedes-Benz">Mercedes-Benz</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Nissan">Nissan</a></th>
-											<th><a href="browse.java?make=Subaru">Subaru</a></th>
-											<th><a href="browse.java?make=Tesla">Tesla</a></th>
-											<th><a href="browse.java?make=Toyota">Toyota</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu2" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?body_type=Sedan">Sedan</a></th>
-											<th><a href="browse.java?body_type=Suv">Suv</a></th>
-											<th><a href="browse.java?body_type=Truck">Truck</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu3" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?year=2014">2014</a></th>
-											<th><a href="browse.java?year=2015">2015</a></th>
-											<th><a href="browse.java?year=2016">2016</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu4" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?price=1">0 - 5000</a></th>
-											<th><a href="browse.java?price=2">5001 - 10,000</a></th>
-											<th><a href="browse.java?price=3">10,001 - 15,000</a></th>
-											<th><a href="browse.java?price=4">15,001 - 20,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=5">20,001 - 25,000</a></th>
-											<th><a href="browse.java?price=6">25,001 - 30,000</a></th>
-											<th><a href="browse.java?price=7">30,001 - 35,000</a></th>
-											<th><a href="browse.java?price=8">35,001 - 40,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=9">40,001 - 45,000</a></th>
-											<th><a href="browse.java?price=10">45,001 - 50,000</a></th>
-											<th><a href="browse.java?price=11">50,001 - 55,000</a></th>
-											<th><a href="browse.java?price=12">55,001 - 60,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=13">60,001 - 65,000</a></th>
-											<th><a href="browse.java?price=14">65,001 - 70,000</a></th>
-											<th><a href="browse.java?price=15">70,001 - 75,000</a></th>
-											<th><a href="browse.java?price=16">75,001 - 80,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=17">80,001 - 85,000</a></th>
-											<th><a href="browse.java?price=18">85,001 - 90,000</a></th>
-											<th><a href="browse.java?price=19">90,001 - 95,000</a></th>
-											<th><a href="browse.java?price=20">95,001 - 100,000</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu5" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?region=Pittsburgh">Pittsburgh</a></th>
-											<th><a href="browse.java?region=New York">New York</a></th>
-											<th><a href="browse.java?region=San Diego">San Diego</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
 		</div>
 
 		<footer class="row-footer">
@@ -642,18 +571,10 @@
 					<div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
 						<h5>Links</h5>
 						<ul class="list-unstyled">
-							<li>
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<a href="/aboutus">About</a>
-							</li>
-							<li>
-								<a href="/inventory">Inventory</a>
-							</li>
-							<li>
-								<a href="/contactus">Contact</a>
-							</li>
+							<li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/inventory">Inventory</a></li>
+                        <li><a href="/contactus">Contact</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-6 col-sm-5">
@@ -670,16 +591,14 @@
 							<i class="fa fa-envelope"></i>: <a href="mailto:lah141@pitt.edu">lah141@pitt.edu</a>
 						</address>
 					</div>
-					<div class='col-xs-12 col-sm-4'>
-						<div style="padding: 40px 10px;">
-							<div class="nav navbar-nav" style="padding: 40px 10px;">
-								<a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-								<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-								<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-								<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-								<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-								<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-							</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="nav navbar-nav" style="padding: 40px 10px;">
+							<a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+							<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+							<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+							<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+							<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+							<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12">
@@ -691,14 +610,12 @@
 				</div>
 			</div>
 		</footer>
-
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 		<!-- my self-built JavaScript -->
 		<script src="js/myjs.js"></script>
-
 	</body>
 
 </html>

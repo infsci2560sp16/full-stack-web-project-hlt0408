@@ -28,6 +28,41 @@ public class Main {
 
             return new ModelAndView(attributes, "index.html");
         }, new FreeMarkerEngine());
+    
+    get("/inventory", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
+
+        return new ModelAndView(attributes, "inventory.html");
+    }, new FreeMarkerEngine());
+    
+    get("/aboutus", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
+
+        return new ModelAndView(attributes, "aboutus.html");
+    }, new FreeMarkerEngine());
+    
+    get("/contactus", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
+
+        return new ModelAndView(attributes, "contactus.html");
+    }, new FreeMarkerEngine());
+    
+    get("/item", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
+
+        return new ModelAndView(attributes, "item.html");
+    }, new FreeMarkerEngine());
+    
+    get("/user", (request, response) -> {
+        Map<String, Object> attributes = new HashMap<>();
+        attributes.put("message", "Hello World!");
+
+        return new ModelAndView(attributes, "user-board.html");
+    }, new FreeMarkerEngine());
 
     get("/db", (req, res) -> {
       Connection connection = null;
