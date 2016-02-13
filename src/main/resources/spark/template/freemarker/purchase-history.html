@@ -72,11 +72,11 @@
 				<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav side-nav">
-						<li class="active">
-							<a href="#"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-						</li>
 						<li>
-							<a href="/purchase-history"><i class="fa fa-fw fa-bar-chart-o"></i> Purchase History</a>
+							<a href="user"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+						</li>
+						<li class="active">
+							<a href="#"><i class="fa fa-fw fa-bar-chart-o"></i> Perchase History</a>
 						</li>
 						<li>
 							<a href="/change-password"><i class="fa fa-fw fa-edit"></i> Change Password</a>
@@ -95,47 +95,61 @@
 					<!-- Page Heading -->
 					<div class="row">
 						<div class="col-lg-12">
-							<h1 class="page-header"> Dash Board <small>Summary</small></h1>
-							
+							<h1 class="page-header"> Purchase History <small>Statistics</small></h1>
+
 						</div>
 					</div>
-					<!-- /.row -->
-					<div  class="col-xs-12 col-sm-8">
-							<div class="panel panel-info">
-								<div class="panel-heading">
-									<h3 class="panel-title">My Name Card</h3>
-								</div>
-								<div class="panel-body">
-									<dl class="dl-horizontal">
-										<dt>
-											Name
-										</dt>
-										<dd>
-											Lucy Lee
-										</dd>
-										<dt>
-											Sex
-										</dt>
-										<dd>
-											Male
-										</dd>
-										<dt>
-											Phone
-										</dt>
-										<dd>
-											987 654 3210
-										</dd>
-										<dt>
-											Email
-										</dt>
-										<dd>
-											lucylee@gmail.com
-										</dd>
-									</dl>
-								</div>
+
+					<div class="row">
+
+						<div class="col-lg-6">
+							<div class="table-responsive">
+								<table class="table table-bordered table-hover table-striped">
+									<thead>
+										<tr>
+											<th>Date</th>
+											<th>Make</th>
+											<th>Model</th>
+											<th>Year</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>01/11/2016</td>
+											<td>BMW</td>
+											<td>525I</td>
+											<td>2016</td>
+										</tr>
+										<tr>
+											<td>09/11/2015</td>
+											<td>Hyundai</td>
+											<td>Elantra</td>
+											<td>2015</td>
+										</tr>
+
+										<tr>
+											<td>01/21/2015</td>
+											<td>Infinity</td>
+											<td>Q50I</td>
+											<td>2014</td>
+										</tr>
+										<tr>
+											<td>03/11/2014</td>
+											<td>Toyota</td>
+											<td>Camry</td>
+											<td>2013</td>
+										</tr>
+										<tr>
+											<td>01/21/2013</td>
+											<td>Ford</td>
+											<td>Focus</td>
+											<td>2012</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
-				
+					</div>
 				</div>
 				<!-- /.container-fluid -->
 
