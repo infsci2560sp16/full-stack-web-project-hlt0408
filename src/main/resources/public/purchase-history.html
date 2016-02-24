@@ -31,7 +31,7 @@
 	<body>
 		<div id="wrapper">
 
-			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
@@ -82,7 +82,7 @@
 							<a href="/change-password"><i class="fa fa-fw fa-edit"></i> Change Password</a>
 						</li>
 						<li>
-							<a href="/"><i class="fa fa-sign-out"></i></i> Logout</a>
+							<a href="/"><i class="fa fa-sign-out"></i> Logout</a>
 						</li>
 					</ul>
 				</div>
@@ -200,7 +200,7 @@
 						<h4 class="modal-title">Register </h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" role="form" action="register.java" method="POST">
+						<form class="form-horizontal" action="register.java" method="POST">
 							<!-- full name input -->
 							<div class="form-group">
 								<label for="fullname" class="col-sm-3 control-label">Full Name</label>
@@ -242,14 +242,14 @@
 							</div>
 							<!-- address-line1 input-->
 							<div class="form-group">
-								<label for="addressline1" class="col-sm-3 control-label">Address Line 1</label>
+								<label class="col-sm-3 control-label">Address Line 1</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_1" name="address_line_1" placeholder="Street address, P.O. box, company name">
 								</div>
 							</div>
 							<!-- address-line2 input-->
 							<div class="form-group">
-								<label for="addressline2" class="col-sm-3 control-label">Address Line 2</label>
+								<label class="col-sm-3 control-label">Address Line 2</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_2" name="address_line_2" placeholder="Apartment, suite , unit, building, floor, etc.">
 								</div>
@@ -330,19 +330,19 @@
 							</div>
 							<!-- home or business-->
 							<div class="form-group">
-								<label for="customertype" class="col-sm-3 control-label">Type</label>
+								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9 btn-group" data-toggle="buttons">
 									<label id="homeuser" class="btn btn-success active">
-										<input type="radio" name="typeradio" value="home" autocomplete="off">
+										<input type="radio" name="typeradio" value="home">
 										Home </label>
 									<label id="businessuser" class="btn btn-danger">
-										<input type="radio" name="typeradio" value="business" autocomplete="off">
+										<input type="radio" name="typeradio" value="business">
 										Business </label>
 								</div>
 							</div>
 							<!-- marriage status -->
 							<div class="form-group" id="marriage_status">
-								<label for="marriage status" class="col-sm-3 control-label">Marriage Status</label>
+								<label class="col-sm-3 control-label">Marriage Status</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
 										<input type="radio" name="marriage" id="inlineRadio1" value="married">
@@ -357,40 +357,40 @@
 							</div>
 							<!-- gender -->
 							<div class="form-group" id="gender">
-								<label for="gender" class="col-sm-3 control-label">Gender</label>
+								<label class="col-sm-3 control-label">Gender</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio1" value="male">
+										<input type="radio" name="gender" id="inlineRadio11" value="male">
 										Male</label>
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio2" value="female">
+										<input type="radio" name="gender" id="inlineRadio21" value="female">
 										Female</label>
 								</div>
 							</div>
 							<!-- age -->
 							<div class="form-group" id='age'>
-								<label for="age" class="col-sm-3 control-label">Age</label>
+								<label class="col-sm-3 control-label">Age</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="age" name="age" min="0" max="150" placeholder="Age">
+									<input type="number" class="form-control" id="age1" name="age" min="0" max="150" placeholder="Age">
 								</div>
 							</div>
 							<!-- income -->
 							<div class="form-group" id="income">
-								<label for="income" class="col-sm-3 control-label">Income</label>
+								<label class="col-sm-3 control-label">Income</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="income" name="income" min="0" placeholder="Income">
+									<input type="number" class="form-control" id="income1" name="income" min="0" placeholder="Income">
 								</div>
 							</div>
 							<!-- business category -->
 							<div class="form-group" id="business_category">
-								<label for="business category" class="col-sm-3 control-label">Business Category</label>
+								<label class="col-sm-3 control-label">Business Category</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="business_category" name="business_category" placeholder="Business Category">
+									<input type="text" class="form-control" id="business_category1" name="business_category" placeholder="Business Category">
 								</div>
 							</div>
 							<!-- company gross annual income -->
 							<div class="form-group" id="business_income">
-								<label for="income" class="col-sm-3 control-label">Company Annual Gross Income</label>
+								<label class="col-sm-3 control-label">Company Annual Gross Income</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="bincome" name="bincome" placeholder="Income">
 								</div>
@@ -427,7 +427,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<!-- my self-built JavaScript -->
 		<script src="js/myjs.js"></script>
 

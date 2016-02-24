@@ -9,7 +9,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head
 		content must come *after* these tags -->
 
-		<title>Car World</title>
+		<title>Contact Us</title>
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
@@ -29,7 +29,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,12 +38,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img class="img-circle" src="img/logo.jpg" alt="logo" height=30 width=61></a>
+					<a class="navbar-brand" href="/"><img class="img-circle" src="img/logo.jpg" alt="logo" height=30 width=61></a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+						<li>
+							<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
 						</li>
 						<li>
 							<a href="/aboutus"><span class="glyphicon glyphicon-info-sign"
@@ -53,7 +53,7 @@
 							<a href="/inventory"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Inventory </a>
 						</li>
 						<li>
-							<a href="/contactus"> <i class="fa fa-envelope-o"></i> Contact</a>
+							<a href="#"> <i class="fa fa-envelope-o"></i> Contact</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -115,7 +115,7 @@
 						<h4 class="modal-title">Register </h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" role="form" action="register.java" method="POST">
+						<form class="form-horizontal" action="register.java" method="POST">
 							<!-- full name input -->
 							<div class="form-group">
 								<label for="fullname" class="col-sm-3 control-label">Full Name</label>
@@ -157,14 +157,14 @@
 							</div>
 							<!-- address-line1 input-->
 							<div class="form-group">
-								<label for="addressline1" class="col-sm-3 control-label">Address Line 1</label>
+								<label class="col-sm-3 control-label">Address Line 1</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_1" name="address_line_1" placeholder="Street address, P.O. box, company name">
 								</div>
 							</div>
 							<!-- address-line2 input-->
 							<div class="form-group">
-								<label for="addressline2" class="col-sm-3 control-label">Address Line 2</label>
+								<label class="col-sm-3 control-label">Address Line 2</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_2" name="address_line_2" placeholder="Apartment, suite , unit, building, floor, etc.">
 								</div>
@@ -245,19 +245,19 @@
 							</div>
 							<!-- home or business-->
 							<div class="form-group">
-								<label for="customertype" class="col-sm-3 control-label">Type</label>
+								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9 btn-group" data-toggle="buttons">
 									<label id="homeuser" class="btn btn-success active">
-										<input type="radio" name="typeradio" value="home" autocomplete="off">
+										<input type="radio" name="typeradio" value="home">
 										Home </label>
 									<label id="businessuser" class="btn btn-danger">
-										<input type="radio" name="typeradio" value="business" autocomplete="off">
+										<input type="radio" name="typeradio" value="business">
 										Business </label>
 								</div>
 							</div>
 							<!-- marriage status -->
 							<div class="form-group" id="marriage_status">
-								<label for="marriage status" class="col-sm-3 control-label">Marriage Status</label>
+								<label class="col-sm-3 control-label">Marriage Status</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
 										<input type="radio" name="marriage" id="inlineRadio1" value="married">
@@ -272,40 +272,40 @@
 							</div>
 							<!-- gender -->
 							<div class="form-group" id="gender">
-								<label for="gender" class="col-sm-3 control-label">Gender</label>
+								<label class="col-sm-3 control-label">Gender</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio1" value="male">
+										<input type="radio" name="gender" id="inlineRadio11" value="male">
 										Male</label>
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio2" value="female">
+										<input type="radio" name="gender" id="inlineRadio21" value="female">
 										Female</label>
 								</div>
 							</div>
 							<!-- age -->
 							<div class="form-group" id='age'>
-								<label for="age" class="col-sm-3 control-label">Age</label>
+								<label class="col-sm-3 control-label">Age</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="age" name="age" min="0" max="150" placeholder="Age">
+									<input type="number" class="form-control" id="age1" name="age" min="0" max="150" placeholder="Age">
 								</div>
 							</div>
 							<!-- income -->
 							<div class="form-group" id="income">
-								<label for="income" class="col-sm-3 control-label">Income</label>
+								<label class="col-sm-3 control-label">Income</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="income" name="income" min="0" placeholder="Income">
+									<input type="number" class="form-control" id="income1" name="income" min="0" placeholder="Income">
 								</div>
 							</div>
 							<!-- business category -->
 							<div class="form-group" id="business_category">
-								<label for="business category" class="col-sm-3 control-label">Business Category</label>
+								<label class="col-sm-3 control-label">Business Category</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="business_category" name="business_category" placeholder="Business Category">
+									<input type="text" class="form-control" id="business_category1" name="business_category" placeholder="Business Category">
 								</div>
 							</div>
 							<!-- company gross annual income -->
 							<div class="form-group" id="business_income">
-								<label for="income" class="col-sm-3 control-label">Company Annual Gross Income</label>
+								<label class="col-sm-3 control-label">Company Annual Gross Income</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="bincome" name="bincome" placeholder="Income">
 								</div>
@@ -359,281 +359,106 @@
 		</header>
 
 		<div class="container">
-			<nav class="navbar navbar-inverse" role="search">
-				<form class="form-inline" role="search" action="search.java" method="POST">
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="make">
-							<option value="">Make</option>
-							<option value="BMW">BMW</option>
-							<option value="Hyundai">Hyundai</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="model">
-							<option value="">Model</option>
-							<option value="525I">525I</option>
-							<option value="325I">325I</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="year">
-							<option value="">Year</option>
-							<option value="2014">2014</option>
-							<option value="2015">2015</option>
-							<option value="2016">2016</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="price">
-							<option value="">Price</option>
-							<option value="1"> 5000</option>
-							<option value="2">5001 - 10,000</option>
-							<option value="3">10,001 - 15,000</option>
-							<option value="4">15,001 - 20,000</option>
-							<option value="5">20,001 - 25,000</option>
-							<option value="6">25,001 - 30,000</option>
-							<option value="7">30,001 - 35,000</option>
-							<option value="8">35,001 - 40,000</option>
-							<option value="9">40,001 - 45,000</option>
-							<option value="10">45,001 - 50,000</option>
-							<option value="11">50,001 - 55,000</option>
-							<option value="12">55,001 - 60,000</option>
-							<option value="13">60,001 - 65,000</option>
-							<option value="14">65,001 - 70,000</option>
-							<option value="15">70,001 - 75,000</option>
-							<option value="16">75,001 - 80,000</option>
-							<option value="17">80,001 - 85,000</option>
-							<option value="18">85,001 - 90,000</option>
-							<option value="19">90,001 - 95,000</option>
-							<option value="20">95,001 - 100,000</option>
-						</select>
-					</div>
-					<div class="form-group col-xs-12 col-sm-2">
-						<select class="form-control" name="region">
-							<option value="">Region</option>
-							<option value="Pittsburgh">Pittsburgh</option>
-							<option value="San Diego">San Diego</option>
-							<option value="New York City">New York City</option>
-							<option value="Atlanta">Atlanta</option>
-						</select>
-					</div>
-					<button type="submit" class="btn btn-info col-xs-12 col-sm-2">
-						Search
-					</button>
-				</form>
-			</nav>
-		</div>
-
-		<div class="container">
-			<div class="row row-content">
+			<div class="row">
 				<div class="col-xs-12">
-					<div id="mycarousel" class="carousel slide" data-ride="carousel">
+					<h1 class="page-header">Item <small>Details</small></h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/inventory">Inventory</a>
+						</li>
+						<li class="active">
+							Item
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Portfolio Item Row -->
+			<div class="row">
+
+				<div class="col-md-8">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
 						<ol class="carousel-indicators">
-							<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#mycarousel" data-slide-to="1"></li>
-							<li data-target="#mycarousel" data-slide-to="2"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						</ol>
+
 						<!-- Wrapper for slides -->
-						<div class="carousel-inner" role="listbox">
+						<div class="carousel-inner">
 							<div class="item active">
-								<img class="img-responsive"
-								src="img/slide1.jpg" alt="Uthappizza">
-								<div class="carousel-caption">
-									<h2>Uthappizza <span class="label label-danger">Hot</span><span class="badge">$4.99</span></h2>
-									<p>
-										A unique combination of Indian Uthappam (pancake) and
-										Italian pizza, topped with Cerignola olives, ripe vine
-										cherry tomatoes, Vidalia onion, Guntur chillies and
-										Buffalo Paneer.
-									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
+								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
 							</div>
 							<div class="item">
-								<img class="img-responsive"
-								src="img/slide2.jpg" alt="buffet">
-								<div class="carousel-caption">
-									<h2>Weekend Grand Buffet <span class="label label-danger label-xs">New</span></h2>
-									<p>
-										Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
-									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
+								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
 							</div>
 							<div class="item">
-								<img class="img-responsive"
-								src="/img/slide3.jpg" alt="Alberto Somayya">
-								<div class="carousel-caption">
-									<h2>Alberto Somayya</h2>
-									<h4>Executive Chef</h4>
-									<p>
-										Award winning three-star Michelin chef with wide
-										International experience having worked closely with
-										whos-who in the culinary world, he specializes in
-										creating mouthwatering Indo-Italian fusion experiences.
-									</p>
-									<p>
-										<a class="btn btn-primary btn-xs" href="/item">More &raquo;</a>
-									</p>
-								</div>
+								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
 							</div>
 						</div>
+
 						<!-- Controls -->
-						<a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
-						<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-						<div class="btn-group" id="carouselButtons">
-							<button class="btn btn-danger btn-xs" id="carousel-pause">
-								<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-							</button>
-							<button class="btn btn-danger btn-xs" id="carousel-play">
-								<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row row-content">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">Browse By Categories</h3>
-					</div>
-					<div class="panel-body">
-						<ul class="nav nav-pills nav-justified">
-							<li class="active">
-								<a data-toggle="tab" href="#home">Make</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu2">Body Type</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu3">Year</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu4">Price</a>
-							</li>
-							<li>
-								<a data-toggle="tab" href="#menu5">Region</a>
-							</li>
-						</ul>
-
-						<div class="tab-content">
-							<div id="home" class="tab-pane fade in active">
-								<div class="table-responsive">
-									<table class="table table-striped" name="make">
-										<tr>
-											<th><a href="browse.java?make=Acura">Acura</a></th>
-											<th><a href="browse.java?make=BMW">BMW</a></th>
-											<th><a href="browse.java?make=Cadillac">Cadillac</a></th>
-											<th><a href="browse.java?make=Chevrolet">Chevrolet</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Chrysler">Chrysler</a></th>
-											<th><a href="browse.java?make=Dodge">Dodge</a></th>
-											<th><a href="browse.java?make=Ford">Ford</a></th>
-											<th><a href="browse.java?make=GMC">GMC</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Honda">Honda</a></th>
-											<th><a href="browse.java?make=Hyundai">Hyundai</a></th>
-											<th><a href="browse.java?make=Infiniti">Infiniti</a></th>
-											<th><a href="browse.java?make=Kia">Kia</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Lexus">Lexus</a></th>
-											<th><a href="browse.java?make=Lincoln">Lincoln</a></th>
-											<th><a href="browse.java?make=Mazda">Mazda</a></th>
-											<th><a href="browse.java?make=Mercedes-Benz">Mercedes-Benz</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?make=Nissan">Nissan</a></th>
-											<th><a href="browse.java?make=Subaru">Subaru</a></th>
-											<th><a href="browse.java?make=Tesla">Tesla</a></th>
-											<th><a href="browse.java?make=Toyota">Toyota</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu2" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?body_type=Sedan">Sedan</a></th>
-											<th><a href="browse.java?body_type=Suv">Suv</a></th>
-											<th><a href="browse.java?body_type=Truck">Truck</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu3" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?year=2014">2014</a></th>
-											<th><a href="browse.java?year=2015">2015</a></th>
-											<th><a href="browse.java?year=2016">2016</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu4" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?price=1">0 - 5000</a></th>
-											<th><a href="browse.java?price=2">5001 - 10,000</a></th>
-											<th><a href="browse.java?price=3">10,001 - 15,000</a></th>
-											<th><a href="browse.java?price=4">15,001 - 20,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=5">20,001 - 25,000</a></th>
-											<th><a href="browse.java?price=6">25,001 - 30,000</a></th>
-											<th><a href="browse.java?price=7">30,001 - 35,000</a></th>
-											<th><a href="browse.java?price=8">35,001 - 40,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=9">40,001 - 45,000</a></th>
-											<th><a href="browse.java?price=10">45,001 - 50,000</a></th>
-											<th><a href="browse.java?price=11">50,001 - 55,000</a></th>
-											<th><a href="browse.java?price=12">55,001 - 60,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=13">60,001 - 65,000</a></th>
-											<th><a href="browse.java?price=14">65,001 - 70,000</a></th>
-											<th><a href="browse.java?price=15">70,001 - 75,000</a></th>
-											<th><a href="browse.java?price=16">75,001 - 80,000</a></th>
-										</tr>
-										<tr>
-											<th><a href="browse.java?price=17">80,001 - 85,000</a></th>
-											<th><a href="browse.java?price=18">85,001 - 90,000</a></th>
-											<th><a href="browse.java?price=19">90,001 - 95,000</a></th>
-											<th><a href="browse.java?price=20">95,001 - 100,000</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu5" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?region=Pittsburgh">Pittsburgh</a></th>
-											<th><a href="browse.java?region=New York">New York</a></th>
-											<th><a href="browse.java?region=San Diego">San Diego</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-						</div>
+						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
+						<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
 					</div>
 				</div>
 
-			</div>
+				<div class="col-md-4">
+					<h3>Car Description</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+					</p>
+					<h3>Car Parameters</h3>
+					<ul>
+						<li>
+							2015
+						</li>
+						<li>
+							BMW 525I
+						</li>
+						<li>
+							MPG: 25
+						</li>
+						<li>
+							Auto Sedan
+						</li>
+					</ul>
+				</div>
 
+			</div>
+			<!-- /.row -->
+
+			<!-- Related Projects Row -->
+			<div class="row">
+
+				<div class="col-lg-12">
+					<h3 class="page-header">Related Cars</h3>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
+				</div>
+
+				<div class="col-sm-3 col-xs-6">
+					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
+				</div>
+
+			</div>
+			<!-- /.row -->
+
+			<hr>
 		</div>
 
 		<footer class="row-footer">
@@ -643,7 +468,7 @@
 						<h5>Links</h5>
 						<ul class="list-unstyled">
 							<li>
-								<a href="#">Home</a>
+								<a href="/">Home</a>
 							</li>
 							<li>
 								<a href="/aboutus">About</a>
@@ -670,21 +495,19 @@
 							<i class="fa fa-envelope"></i>: <a href="mailto:lah141@pitt.edu">lah141@pitt.edu</a>
 						</address>
 					</div>
-					<div class='col-xs-12 col-sm-4'>
-						<div style="padding: 40px 10px;">
-							<div class="nav navbar-nav" style="padding: 40px 10px;">
-								<a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-								<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-								<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-								<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-								<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-								<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-							</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="nav navbar-nav" style="padding: 40px 10px;">
+							<a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+							<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+							<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+							<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+							<a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+							<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
 						</div>
 					</div>
 					<div class="col-xs-12">
 						<p style="padding:10px;"></p>
-						<p align=center>
+						<p class="center-p">
 							© Copyright 2016 LH
 						</p>
 					</div>
@@ -695,7 +518,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<!-- my self-built JavaScript -->
 		<script src="js/myjs.js"></script>
 

@@ -93,3 +93,7 @@ body {
   position: absolute;
   right: 0px;
 }
+
+.center-p {
+	 align = center;
+}

@@ -29,7 +29,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -52,7 +52,7 @@
 						<li>
 							<a href="/inventory"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Inventory </a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="#"> <i class="fa fa-envelope-o"></i> Contact</a>
 						</li>
 					</ul>
@@ -115,7 +115,7 @@
 						<h4 class="modal-title">Register </h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" role="form" action="register.java" method="POST">
+						<form class="form-horizontal" action="register.java" method="POST">
 							<!-- full name input -->
 							<div class="form-group">
 								<label for="fullname" class="col-sm-3 control-label">Full Name</label>
@@ -157,14 +157,14 @@
 							</div>
 							<!-- address-line1 input-->
 							<div class="form-group">
-								<label for="addressline1" class="col-sm-3 control-label">Address Line 1</label>
+								<label class="col-sm-3 control-label">Address Line 1</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_1" name="address_line_1" placeholder="Street address, P.O. box, company name">
 								</div>
 							</div>
 							<!-- address-line2 input-->
 							<div class="form-group">
-								<label for="addressline2" class="col-sm-3 control-label">Address Line 2</label>
+								<label class="col-sm-3 control-label">Address Line 2</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="address_line_2" name="address_line_2" placeholder="Apartment, suite , unit, building, floor, etc.">
 								</div>
@@ -245,19 +245,19 @@
 							</div>
 							<!-- home or business-->
 							<div class="form-group">
-								<label for="customertype" class="col-sm-3 control-label">Type</label>
+								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9 btn-group" data-toggle="buttons">
 									<label id="homeuser" class="btn btn-success active">
-										<input type="radio" name="typeradio" value="home" autocomplete="off">
+										<input type="radio" name="typeradio" value="home">
 										Home </label>
 									<label id="businessuser" class="btn btn-danger">
-										<input type="radio" name="typeradio" value="business" autocomplete="off">
+										<input type="radio" name="typeradio" value="business">
 										Business </label>
 								</div>
 							</div>
 							<!-- marriage status -->
 							<div class="form-group" id="marriage_status">
-								<label for="marriage status" class="col-sm-3 control-label">Marriage Status</label>
+								<label class="col-sm-3 control-label">Marriage Status</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
 										<input type="radio" name="marriage" id="inlineRadio1" value="married">
@@ -272,40 +272,40 @@
 							</div>
 							<!-- gender -->
 							<div class="form-group" id="gender">
-								<label for="gender" class="col-sm-3 control-label">Gender</label>
+								<label class="col-sm-3 control-label">Gender</label>
 								<div class="col-sm-9">
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio1" value="male">
+										<input type="radio" name="gender" id="inlineRadio11" value="male">
 										Male</label>
 									<label class="radio-inline">
-										<input type="radio" name="gender" id="inlineRadio2" value="female">
+										<input type="radio" name="gender" id="inlineRadio21" value="female">
 										Female</label>
 								</div>
 							</div>
 							<!-- age -->
 							<div class="form-group" id='age'>
-								<label for="age" class="col-sm-3 control-label">Age</label>
+								<label class="col-sm-3 control-label">Age</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="age" name="age" min="0" max="150" placeholder="Age">
+									<input type="number" class="form-control" id="age1" name="age" min="0" max="150" placeholder="Age">
 								</div>
 							</div>
 							<!-- income -->
 							<div class="form-group" id="income">
-								<label for="income" class="col-sm-3 control-label">Income</label>
+								<label class="col-sm-3 control-label">Income</label>
 								<div class="col-sm-9">
-									<input type="number" class="form-control" id="income" name="income" min="0" placeholder="Income">
+									<input type="number" class="form-control" id="income1" name="income" min="0" placeholder="Income">
 								</div>
 							</div>
 							<!-- business category -->
 							<div class="form-group" id="business_category">
-								<label for="business category" class="col-sm-3 control-label">Business Category</label>
+								<label class="col-sm-3 control-label">Business Category</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="business_category" name="business_category" placeholder="Business Category">
+									<input type="text" class="form-control" id="business_category1" name="business_category" placeholder="Business Category">
 								</div>
 							</div>
 							<!-- company gross annual income -->
 							<div class="form-group" id="business_income">
-								<label for="income" class="col-sm-3 control-label">Company Annual Gross Income</label>
+								<label class="col-sm-3 control-label">Company Annual Gross Income</label>
 								<div class="col-sm-9">
 									<input type="text" class="form-control" id="bincome" name="bincome" placeholder="Income">
 								</div>
@@ -361,104 +361,133 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h1 class="page-header">Item <small>Details</small></h1>
+					<h3>Contact Us</h3>
+					<hr>
 					<ul class="breadcrumb">
 						<li>
 							<a href="/">Home</a>
 						</li>
-						<li>
-							<a href="/inventory">Inventory</a>
-						</li>
 						<li class="active">
-							Item
+							Contact Us
 						</li>
 					</ul>
 				</div>
+
 			</div>
 
-			<!-- Portfolio Item Row -->
-			<div class="row">
+			<div class="row row-content">
+				<div class="col-xs-12">
+					<h3>Location Information</h3>
+				</div>
+				<div class="col-xs-12 col-sm-5">
+					<h5>Our Address</h5>
+					<address style="font-size: 100%">
+						135 N Bellefield Ave
+						<br>
+						Pittsburgh, PA 15260
+						<br>
+						<i class="fa fa-phone"></i>: +1 234 567 8910
+						<br>
+						<i class="fa fa-fax"></i>: +1 234 567 8910
+						<br>
+						<i class="fa fa-envelope"></i>: <a href="mailto:lah141@pitt.edu">lah141@pitt.edu</a>
+					</address>
+					<div class="col-xs-12 col-sm-12">
+						<div class="btn-group" role="group" aria-label="...">
+							<a class="btn btn-primary" href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
+							<a class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+							<a class="btn btn-success" href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-7">
+					<h5>Map of our Location</h5>
+					<!-- Embedded Google Map -->
+				</div>
 
-				<div class="col-md-8">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						</ol>
+			</div>
 
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
-							<div class="item active">
-								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
+
+			<div class="row row-content">
+				<div class="col-xs-12">
+					<h3>Send us your Feedback</h3>
+				</div>
+				<div class="col-xs-12 col-sm-9">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="firstname" class="col-sm-2 control-label">First Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name">
 							</div>
-							<div class="item">
-								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
-							</div>
-							<div class="item">
-								<img class="img-responsive" src="http://lorempixel.com/750/300/transport" alt="">
+						</div>
+						<div class="form-group">
+							<label for="lastname" class="col-sm-2 control-label">Last Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name">
 							</div>
 						</div>
 
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
-						<a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-					</div>
-				</div>
+						<div class="form-group">
+							<label for="telnum" class="col-xs-12 col-sm-2 control-label">Contact Tel.</label>
+							<div class="col-xs-5 col-sm-4 col-md-3">
+								<div class="input-group">
+									<div class="input-group-addon">
+										(
+									</div>
+									<input type="tel" class="form-control" id="areacode1" name="areacode" placeholder="Area code">
+									<div class="input-group-addon">
+										)
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-7 col-sm-6 col-md-7">
+								<input type="tel" class="form-control" id="telnum1" name="telnum" placeholder="Tel. number">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="emailid" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="emailid1" name="emailid" placeholder="Email">
+							</div>
+						</div>
+						<!-- checkbox and select -->
+						<div class="form-group">
+							<div class="checkbox col-sm-5 col-sm-offset-2">
+								<label class="checkbox-inline">
+									<input type="checkbox" name="approve" value="">
+									<strong>May we contact you?</strong> </label>
+							</div>
+							<div class="col-sm-3 col-sm-offset-1">
+								<select class="form-control">
+									<option>Tel.</option>
+									<option>Email</option>
+								</select>
+							</div>
+						</div>
+						<!-- textarea -->
+						<div class="form-group">
+							<label for="feedback" class="col-sm-2 control-label">Your Feedback</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+							</div>
+						</div>
+						<!-- submit button -->
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-primary">
+									Send Feedback
+								</button>
+							</div>
+						</div>
 
-				<div class="col-md-4">
-					<h3>Car Description</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
-					</p>
-					<h3>Car Parameters</h3>
-					<ul>
-						<li>
-							2015
-						</li>
-						<li>
-							BMW 525I
-						</li>
-						<li>
-							MPG: 25
-						</li>
-						<li>
-							Auto Sedan
-						</li>
-					</ul>
-				</div>
+					</form>
 
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<p style="padding:20px;"></p>
+				</div>
 			</div>
-			<!-- /.row -->
 
-			<!-- Related Projects Row -->
-			<div class="row">
-
-				<div class="col-lg-12">
-					<h3 class="page-header">Related Cars</h3>
-				</div>
-
-				<div class="col-sm-3 col-xs-6">
-					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
-				</div>
-
-				<div class="col-sm-3 col-xs-6">
-					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
-				</div>
-
-				<div class="col-sm-3 col-xs-6">
-					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
-				</div>
-
-				<div class="col-sm-3 col-xs-6">
-					<a href="#"> <img class="img-responsive img-hover img-related" src="http://lorempixel.com/500/300/transport" alt=""> </a>
-				</div>
-
-			</div>
-			<!-- /.row -->
-
-			<hr>
 		</div>
 
 		<footer class="row-footer">
@@ -477,7 +506,7 @@
 								<a href="/inventory">Inventory</a>
 							</li>
 							<li>
-								<a href="/contactus">Contact</a>
+								<a href="#">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -507,7 +536,7 @@
 					</div>
 					<div class="col-xs-12">
 						<p style="padding:10px;"></p>
-						<p align=center>
+						<p class="center-p">
 							© Copyright 2016 LH
 						</p>
 					</div>
@@ -518,7 +547,7 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<!-- my self-built JavaScript -->
 		<script src="js/myjs.js"></script>
 
