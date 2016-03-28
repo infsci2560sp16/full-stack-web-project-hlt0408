@@ -1,33 +1,57 @@
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="https://devcenter.heroku.com/articles/how-heroku-works"><span class="glyphicon glyphicon-user"></span> How Heroku Works</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> Getting Started Guides <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-ruby">Getting Started with Ruby on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started with PHP on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-python">Getting Started with Python on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-go">Getting Started with Go on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-clojure">Getting Started with Clojure on Heroku</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-scala">Getting Started with Scala on Heroku</a></li>
-            <li class="divider"></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-and-connect-without-local-dev">Getting Started on Heroku with Heroku Connect</a></li>
-            <li><a href="https://devcenter.heroku.com/articles/getting-started-with-jruby">Getting Started with Ruby on Heroku (Microsoft Windows)</a></li>
-          </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="navbar-right">
-        <a href="https://devcenter.heroku.com"><span class="glyphicon glyphicon-book"></span> Heroku Dev Center</a>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"><img class="img-circle" src="img/logo.jpg" alt="logo" height=30 width=61></a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<#if homeactive??>
+				<li class="active">
+				<#else>
+				<li>
+				</#if>
+					<a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+				</li>
+				<#if aboutactive??>
+				<li class="active">
+				<#else>
+				<li>
+				</#if>
+					<a href="/aboutus"><span class="glyphicon glyphicon-info-sign"
+					aria-hidden="true"></span> About</a>
+				</li>
+				<#if inventoryactive??>
+				<li class="active">
+				<#else>
+				<li>
+				</#if>
+					<a href="/inventory"> <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Inventory </a>
+				</li>
+				<#if contactactive??>
+				<li class="active">
+				<#else>
+				<li>
+				</#if>
+					<a href="/contactus"> <i class="fa fa-envelope-o"></i> Contact</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="/user-board"><i class="glyphicon glyphicon-user"></i> My Account</a>
+				</li>
+				<li>
+					<a id="/registerButton"><span class="glyphicon glyphicon-register"></span> Register</a>
+				</li>
+				<li>
+					<a id="/loginButton"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
