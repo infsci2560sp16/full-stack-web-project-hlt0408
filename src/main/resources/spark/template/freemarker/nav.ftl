@@ -46,10 +46,10 @@
 					<a href="/user-board"><i class="glyphicon glyphicon-user"></i> My Account</a>
 				</li>
 				<li>
-					<a id="/registerButton"><span class="glyphicon glyphicon-register"></span> Register</a>
+					<a id="registerButton"><span class="glyphicon glyphicon-register"></span> Register</a>
 				</li>
 				<li>
-					<a id="/loginButton"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+					<a id="loginButton"><span class="glyphicon glyphicon-log-in"></span> Login</a>
 				</li>
 			</ul>
 		</div>
