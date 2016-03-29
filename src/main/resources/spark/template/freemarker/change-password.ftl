@@ -24,18 +24,18 @@
 					<div class="row">
 						<div class="col-lg-6">
 
-							<form>
+							<form action="/change-password" method="POST">
 								<div class="form-group">
 									<label>Old Password</label>
-									<input class="form-control">
+									<input class="form-control" name="old-pwd">
 								</div>
 								<div class="form-group">
 									<label>New Password</label>
-									<input class="form-control">
+									<input class="form-control" name="new-pwd-1">
 								</div>
 								<div class="form-group">
 									<label>New Password Again</label>
-									<input class="form-control">
+									<input class="form-control" name="new-pwd-2">
 								</div>
 								<button type="submit" class="btn btn-primary">
 									Change Password

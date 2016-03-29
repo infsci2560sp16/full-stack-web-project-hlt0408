@@ -10,10 +10,10 @@
 					</div>
 					<div class="modal-body">
 
-						<form class="form-inline" role="search">
+						<form class="form-inline" role="search" action="/login" method="POST">
 							<div class="form-group">
-								<input type="text" class="form-control input-sm" placeholder="Email">
-								<input type="text" class="form-control input-sm" placeholder="Password">
+								<input type="text" class="form-control input-sm" placeholder="Email" name="email">
+								<input type="text" class="form-control input-sm" placeholder="Password" name="password">
 							</div>
 							<label class="checkbox-inline">
 								<input type="checkbox" name="approve" value="">

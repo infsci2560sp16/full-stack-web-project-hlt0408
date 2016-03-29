@@ -9,7 +9,7 @@
 						<h4 class="modal-title">Register </h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-horizontal" action="register.java" method="POST">
+						<form class="form-horizontal" action="/register" method="POST">
 							<!-- full name input -->
 							<div class="form-group">
 								<label for="fullname" class="col-sm-3 control-label">Full Name</label>
@@ -20,18 +20,8 @@
 							<!-- telephone input -->
 							<div class="form-group">
 								<label for="telnum" class="col-xs-12 col-sm-3 control-label">Contact Tel.</label>
-								<div class="col-xs-5 col-sm-4">
-									<div class="input-group">
-										<div class="input-group-addon">
-											(
-										</div>
-										<input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
-										<div class="input-group-addon">
-											)
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-7 col-sm-5">
+		
+								<div class="col-xs-12 col-sm-9">
 									<input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
 								</div>
 							</div>
@@ -49,18 +39,12 @@
 									<input type="password" class="form-control" id="password" name="pword" placeholder="Password">
 								</div>
 							</div>
-							<!-- address-line1 input-->
+			
+							<!-- address input-->
 							<div class="form-group">
-								<label class="col-sm-3 control-label">Address Line 1</label>
+								<label class="col-sm-3 control-label">Address </label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="address_line_1" name="address_line_1" placeholder="Street address, P.O. box, company name">
-								</div>
-							</div>
-							<!-- address-line2 input-->
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Address Line 2</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="address_line_2" name="address_line_2" placeholder="Apartment, suite , unit, building, floor, etc.">
+									<input type="text" class="form-control" id="address_line_2" name="address" placeholder="Address">
 								</div>
 							</div>
 							<!-- city input-->
@@ -137,15 +121,22 @@
 									<input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zip Code">
 								</div>
 							</div>
+							<!-- income -->
+							<div class="form-group" id="income">
+								<label class="col-sm-3 control-label">Income</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" id="income1" name="income" min="0" placeholder="Income">
+								</div>
+							</div>
 							<!-- home or business-->
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Type</label>
 								<div class="col-sm-9 btn-group" data-toggle="buttons">
 									<label id="homeuser" class="btn btn-success active">
-										<input type="radio" name="typeradio" value="home">
+										<input type="radio" name="usertype" value="home">
 										Home </label>
 									<label id="businessuser" class="btn btn-danger">
-										<input type="radio" name="typeradio" value="business">
+										<input type="radio" name="usertype" value="business">
 										Business </label>
 								</div>
 							</div>
@@ -183,36 +174,23 @@
 									<input type="number" class="form-control" id="age1" name="age" min="0" max="150" placeholder="Age">
 								</div>
 							</div>
-							<!-- income -->
-							<div class="form-group" id="income">
-								<label class="col-sm-3 control-label">Income</label>
-								<div class="col-sm-9">
-									<input type="number" class="form-control" id="income1" name="income" min="0" placeholder="Income">
-								</div>
-							</div>
+							
 							<!-- business category -->
 							<div class="form-group" id="business_category">
 								<label class="col-sm-3 control-label">Business Category</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="business_category1" name="business_category" placeholder="Business Category">
-								</div>
-							</div>
-							<!-- company gross annual income -->
-							<div class="form-group" id="business_income">
-								<label class="col-sm-3 control-label">Company Annual Gross Income</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="bincome" name="bincome" placeholder="Income">
+									<input type="text" class="form-control" id="business_category1" name="businessCategory" placeholder="Business Category">
 								</div>
 							</div>
 							<!-- checkbox and select -->
 							<div class="form-group">
 								<div class="checkbox col-sm-5 col-sm-offset-3">
 									<label class="checkbox-inline">
-										<input type="checkbox" name="may_we_contact" value="">
+										<input type="checkbox" name="canContact" value="true">
 										<strong>May we contact you?</strong> </label>
 								</div>
 								<div class="col-sm-3 col-sm-offset-1">
-									<select class="form-control" name="contact_method">
+									<select class="form-control" name="contactmethod">
 										<option value="tel">Tel.</option>
 										<option value="email">Email</option>
 									</select>
