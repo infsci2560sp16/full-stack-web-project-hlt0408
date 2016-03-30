@@ -24,7 +24,7 @@
 					<div class="row">
 						<div class="col-lg-6">
 
-							<form action="/change-password" method="POST">
+							<form action="/change-password" method="post">
 								<div class="form-group">
 									<label>Old Password</label>
 									<input class="form-control" name="old-pwd">

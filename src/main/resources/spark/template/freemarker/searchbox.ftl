@@ -50,11 +50,9 @@
 					</div>
 					<div class="form-group col-xs-12 col-sm-2">
 						<select class="form-control" name="region">
-							<option value="">Region</option>
-							<option value="Pittsburgh">Pittsburgh</option>
-							<option value="San Diego">San Diego</option>
-							<option value="New York City">New York City</option>
-							<option value="Atlanta">Atlanta</option>
+							<option value="">Body Type</option>
+							<option value="Sedan">Sedan</option>
+							<option value="SUV">SUV</option>
 						</select>
 					</div>
 					<button type="submit" class="btn btn-info col-xs-12 col-sm-2">

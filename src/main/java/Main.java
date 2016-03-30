@@ -1,5 +1,7 @@
+import com.google.gson.Gson;
 import java.sql.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Arrays;
@@ -13,6 +15,7 @@ import spark.ModelAndView;
 import static spark.Spark.get;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
+import spark.Request;
 
 public class Main {
 
@@ -37,6 +40,40 @@ public class Main {
 
 			return new ModelAndView(attributes, "aboutus.ftl");
 		}, new FreeMarkerEngine());
+
+		Gson gson = new Gson();
+
+		get("/api/inventory", (req, res) -> {
+			List<Object> data = new ArrayList<>();
+			Connection connection = null;
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars");
+
+				while (rs.next()) {
+					Map<String, Object> car = new HashMap<>();
+					
+					car.put("id", rs.getInt("id"));
+					car.put("make", rs.getString("make"));
+					car.put("model", rs.getString("model"));
+					car.put("year", rs.getInt("year"));
+					car.put("bodytype", rs.getString("bodytype"));
+					car.put("price", rs.getInt("price"));
+					car.put("path", rs.getString("path"));
+					data.add(car);				
+				}
+			} catch (Exception e) {
+				data.add("There was an error: " + e);
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			return data;
+		}, gson::toJson);
 
 		get("/inventory", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();
@@ -80,7 +117,7 @@ public class Main {
 			return new ModelAndView(attributes, "purchase-history.ftl");
 		}, new FreeMarkerEngine());
 
-		get("/change-password", (request, response) -> {
+		post("/change-password", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();
 			attributes.put("title", "Change Password");
 			Connection connection = null;

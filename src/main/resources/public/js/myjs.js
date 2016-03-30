@@ -33,6 +33,7 @@ $(document).ready(function(){
     	$("#business_category").show();
     	$("#business_income").show();
     });
+    
 
     
 });

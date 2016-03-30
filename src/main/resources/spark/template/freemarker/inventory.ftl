@@ -3,6 +3,7 @@
 
 	<head>
 		<#include "header.ftl">
+		<script src="js/inventory.js"></script>
 	</head>
 
 	<body>
@@ -70,138 +71,11 @@
 										<option value="">Body Type</option>
 										<option value="browse.java?body_type=Suv">Suv</option>
 										<option value="browse.java?body_type=Sedan">Sedan</option>
-										<option value="browse.java?body_type=truck">Truck</option>
 									</select>
-								</li>
-								<li>
-									<select class="form-control" name="cylinder_count" onchange="location = this.value;">
-										<option value="">Cylinder Count</option>
-										<option value="browse.java?cylinder_count=3">3</option>
-										<option value="browse.java?cylinder_count=4">4</option>
-										<option value="browse.java?cylinder_count=5">5</option>
-										<option value="browse.java?cylinder_count=6">6</option>
-									</select>
-								</li>
-								<li>
-									<select class="form-control" name="transmission" onchange="location = this.value;">
-										<option value="">Transmission</option>
-										<option value="browse.java?transmission=auto">Auto</option>
-										<option value="browse.java?transmission=manual">Manual</option>
-									</select>
-								</li>
-								<li>
-									<select class="form-control" name="fuel" onchange="location = this.value;">
-										<option value="">Fuel</option>
-										<option value="browse.java?fuel=Gasoline">Gasoline</option>
-										<option value="browse.java?fuel=Diesels">Diesels</option>
-										<option value="browse.java?fuel=Electric">Electric</option>
-									</select>
-								</li>
-								<li>
-									<select class="form-control" name="mpg" onchange="location = this.value;">
-										<option value="">MPG</option>
-										<option value="browse.java?mpg=1">1 - 5</option>
-										<option value="browse.java?mpg=2">6 - 10</option>
-										<option value="browse.java?mpg=3">11 - 15</option>
-										<option value="browse.java?mpg=4">16 - 20</option>
-										<option value="browse.java?mpg=5">21 - 25</option>
-										<option value="browse.java?mpg=6">26 - 30</option>
-										<option value="browse.java?mpg=7">31 - 35</option>
-										<option value="browse.java?mpg=8">36 - 40</option>
-										<option value="browse.java?mpg=9">41 - 45</option>
-									</select>
-								</li>
+								</li>					
 							</ul>
 						</nav>
-						<div class="col-xs-12 col-sm-10">
-							<!-- Project one -->
-							<div class="row">
-								<div class="col-md-7">
-									<a href="/item"> <img class="img-responsive img-hover" src="http://lorempixel.com/700/300/transport" alt=""> </a>
-								</div>
-								<div class="col-md-5">
-									<h3>Car One</h3>
-									<h4>Subheading</h4>
-									<p>
-										To replace by dynamic inventory from database and backend server.
-									</p>
-									<a class="btn btn-primary" href="/item">View Project</a>
-								</div>
-							</div>
-							<hr>
-
-							<!-- Project Two -->
-							<div class="row">
-								<div class="col-md-7">
-									<a href="/item"> <img class="img-responsive img-hover" src="http://lorempixel.com/700/300/transport" alt=""> </a>
-								</div>
-								<div class="col-md-5">
-									<h3>Car Two</h3>
-									<h4>Subheading</h4>
-									<p>
-										To replace by dynamic inventory from database and backend server.
-									</p>
-									<a class="btn btn-primary" href="/item">View Project</a>
-								</div>
-							</div>
-							<!-- /.row -->
-
-							<hr>
-
-							<!-- Project Three -->
-							<div class="row">
-								<div class="col-md-7">
-									<a href="/item"> <img class="img-responsive img-hover" src="http://lorempixel.com/700/300/transport" alt=""> </a>
-								</div>
-								<div class="col-md-5">
-									<h3>Car Three</h3>
-									<h4>Subheading</h4>
-									<p>
-										To replace by dynamic inventory from database and backend server.
-									</p>
-									<a class="btn btn-primary" href="/item">View Project</a>
-								</div>
-							</div>
-							<!-- /.row -->
-
-							<hr>
-
-							<!-- Project Four -->
-							<div class="row">
-
-								<div class="col-md-7">
-									<a href="/item"> <img class="img-responsive img-hover" src="http://lorempixel.com/700/300/transport" alt=""> </a>
-								</div>
-								<div class="col-md-5">
-									<h3>Car Four</h3>
-									<h4>Subheading</h4>
-									<p>
-										To replace by dynamic inventory from database and backend server.
-									</p>
-									<a class="btn btn-primary" href="/item">View Project</a>
-								</div>
-							</div>
-							<!-- /.row -->
-
-							<hr>
-
-							<!-- Project Five -->
-							<div class="row">
-								<div class="col-md-7">
-									<a href="#"> <img class="img-responsive img-hover" src="http://lorempixel.com/700/300/transport" alt=""> </a>
-								</div>
-								<div class="col-md-5">
-									<h3>Car Five</h3>
-									<h4>Subheading</h4>
-									<p>
-										To replace by dynamic inventory from database and backend server.
-									</p>
-									<a class="btn btn-primary" href="#">View Project</a>
-								</div>
-							</div>
-							<!-- /.row -->
-
-							<hr>
+						<div class="col-xs-12 col-sm-10" id="inv">
 						</div>
 
 						<!-- Pagination -->

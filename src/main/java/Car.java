@@ -1,10 +1,14 @@
 public class Car {
+	int id;
 	String make;
 	String model;
 	int year;
 	String bodytype;
-	String price;
-	
+	int price;
+	String path;
+	public int getid() {
+		return id;
+	}
 	public String getmake() {
 		return make;
 	}
@@ -17,7 +21,10 @@ public class Car {
 	public String getbodytype() {
 		return bodytype;
 	}
-	public String getprice() {
+	public int getprice() {
 		return price;
+	}
+	public String getpath() {
+		return path;
 	}
 }

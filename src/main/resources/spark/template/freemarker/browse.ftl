@@ -17,9 +17,6 @@
 							<li>
 								<a data-toggle="tab" href="#menu4">Price</a>
 							</li>
-							<li>
-								<a data-toggle="tab" href="#menu5">Region</a>
-							</li>
 						</ul>
 
 						<div class="tab-content">
@@ -65,7 +62,6 @@
 										<tr>
 											<th><a href="browse.java?body_type=Sedan">Sedan</a></th>
 											<th><a href="browse.java?body_type=Suv">Suv</a></th>
-											<th><a href="browse.java?body_type=Truck">Truck</a></th>
 										</tr>
 									</table>
 								</div>
@@ -113,17 +109,6 @@
 											<th><a href="browse.java?price=18">85,001 - 90,000</a></th>
 											<th><a href="browse.java?price=19">90,001 - 95,000</a></th>
 											<th><a href="browse.java?price=20">95,001 - 100,000</a></th>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div id="menu5" class="tab-pane fade">
-								<div class="table-responsive">
-									<table class="table table-striped">
-										<tr>
-											<th><a href="browse.java?region=Pittsburgh">Pittsburgh</a></th>
-											<th><a href="browse.java?region=NewYork">New York</a></th>
-											<th><a href="browse.java?region=SanDiego">San Diego</a></th>
 										</tr>
 									</table>
 								</div>
