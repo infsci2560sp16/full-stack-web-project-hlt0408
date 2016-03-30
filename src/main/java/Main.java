@@ -111,13 +111,14 @@ public class Main {
 			return data;
 		}, gson::toJson);
 		
-		post("/api/inventory/year/:name", (req, res) -> {
+		post("/api/inventory/year", (req, res) -> {
 			List<Object> data = new ArrayList<>();
 			Connection connection = null;
 			try {
 				connection = DatabaseUrl.extract().getConnection();
 				Statement stmt = connection.createStatement();
-				String year = req.params(":name");
+				JSONObject obj = new JSONObject(req.body());
+				String year = obj.getString("year");
 				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where year ='" + year + "'");
 
 				while (rs.next()) {
@@ -144,7 +145,7 @@ public class Main {
 			return data;
 		}, gson::toJson);
 		
-		post("/api/inventory/bodytype/:name", (req, res) -> {
+		get("/api/inventory/bodytype/:name", (req, res) -> {
 			List<Object> data = new ArrayList<>();
 			Connection connection = null;
 			try {
@@ -177,7 +178,7 @@ public class Main {
 			return data;
 		}, gson::toJson);
 		
-		post("/api/inventory/price/:name", (req, res) -> {
+		get("/api/inventory/price/:name", (req, res) -> {
 			List<Object> data = new ArrayList<>();
 			Connection connection = null;
 			try {

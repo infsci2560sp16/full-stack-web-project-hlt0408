@@ -59,13 +59,15 @@ function browseByMake () {
 }
 
 function browseByYear () {
+	var obj = JSON.stringify({"year" : $( "#year" ).val()});
 	$.ajax({
-		url : "/api/inventory/year/" + $( "#year" ).val(),
+		url : "/api/inventory/year",
 		type : "post",
-		success : function(result) {
+		contentType:'application/json',
+		dataType: "json",
+		data : obj,
+		success : function(cars) {
 			$("#inv").html("");
-			var cars = JSON.parse(result);
-			console.log(result);
 			for ( var i = 0; i < cars.length; i++) {
 				$("#inv").prepend(
 						'<div class="row" id="' + cars[i].id + '">' +
@@ -90,7 +92,7 @@ function browseByYear () {
 function browseByBodytype () {
 	$.ajax({
 		url : "/api/inventory/bodytype/" + $( "#bodytype" ).val(),
-		type : "post",
+		type : "get",
 		success : function(result) {
 			$("#inv").html("");
 			var cars = JSON.parse(result);
@@ -119,7 +121,7 @@ function browseByBodytype () {
 function browseByPrice () {
 	$.ajax({
 		url : "/api/inventory/price/" + $( "#price" ).val(),
-		type : "post",
+		type : "get",
 		success : function(result) {
 			$("#inv").html("");
 			var cars = JSON.parse(result);
