@@ -74,6 +74,40 @@ public class Main {
 			}
 			return data;
 		}, gson::toJson);
+		
+		post("/api/inventory/make/:name", (req, res) -> {
+			List<Object> data = new ArrayList<>();
+			Connection connection = null;
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				String make = req.params(":name");
+				System.out.println(make);
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where make ='" + make + "'");
+
+				while (rs.next()) {
+					Map<String, Object> car = new HashMap<>();
+					
+					car.put("id", rs.getInt("id"));
+					car.put("make", rs.getString("make"));
+					car.put("model", rs.getString("model"));
+					car.put("year", rs.getInt("year"));
+					car.put("bodytype", rs.getString("bodytype"));
+					car.put("price", rs.getInt("price"));
+					car.put("path", rs.getString("path"));
+					data.add(car);				
+				}
+			} catch (Exception e) {
+				data.add("There was an error: " + e);
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			return data;
+		}, gson::toJson);
 
 		get("/inventory", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();

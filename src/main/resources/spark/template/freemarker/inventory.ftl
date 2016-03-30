@@ -20,17 +20,18 @@
 						<nav class="hidden-xs col-sm-2" id="myScrollspy">
 							<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="100">
 								<li>
-									<select class="form-control" name="make" onchange="location = this.value;">
+									<select class="form-control" id="make" onchange="browseByMake()">
 										<option value="">Make</option>
-										<option value="browse.java?make=BMW">BMW</option>
-										<option value="browse.java?make=Hyundai">Hyundai</option>
-									</select>
-								</li>
-								<li>
-									<select class="form-control" name="model" onchange="location = this.value;">
-										<option value="">Model</option>
-										<option value="browse.java?model=525I">525I</option>
-										<option value="browse.java?model=Elantra">Elantra</option>
+										<option value="Audi">Audi</option>
+										<option value="BMW">BMW</option>
+										<option value="Chevrolet">Chevrolet</option>
+										<option value="Dodge">Dodge</option>
+										<option value="Ford">Ford</option>
+										<option value="Honda">Honda</option>
+										<option value="Hyundai">Hyundai</option>
+										<option value="Infinity">Infinity</option>
+										<option value="Kia">Kia</option>
+										<option value="Mazda">Mazda</option>
 									</select>
 								</li>
 								<li>
@@ -72,11 +73,10 @@
 										<option value="browse.java?body_type=Suv">Suv</option>
 										<option value="browse.java?body_type=Sedan">Sedan</option>
 									</select>
-								</li>					
+								</li>
 							</ul>
 						</nav>
-						<div class="col-xs-12 col-sm-10" id="inv">
-						</div>
+						<div class="col-xs-12 col-sm-10" id="inv"></div>
 
 						<!-- Pagination -->
 						<div class="row text-center">
