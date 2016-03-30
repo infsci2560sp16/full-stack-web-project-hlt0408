@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import org.json.JSONObject;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.List;
@@ -75,15 +76,117 @@ public class Main {
 			return data;
 		}, gson::toJson);
 		
-		post("/api/inventory/make/:name", (req, res) -> {
+		post("/api/inventory/make", (req, res) -> {
 			List<Object> data = new ArrayList<>();
 			Connection connection = null;
 			try {
 				connection = DatabaseUrl.extract().getConnection();
 				Statement stmt = connection.createStatement();
-				String make = req.params(":name");
+				JSONObject obj = new JSONObject(req.body());
+				String make = obj.getString("make");
 				System.out.println(make);
 				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where make ='" + make + "'");
+
+				while (rs.next()) {
+					Map<String, Object> car = new HashMap<>();
+					
+					car.put("id", rs.getInt("id"));
+					car.put("make", rs.getString("make"));
+					car.put("model", rs.getString("model"));
+					car.put("year", rs.getInt("year"));
+					car.put("bodytype", rs.getString("bodytype"));
+					car.put("price", rs.getInt("price"));
+					car.put("path", rs.getString("path"));
+					data.add(car);				
+				}
+			} catch (Exception e) {
+				data.add("There was an error: " + e);
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			return data;
+		}, gson::toJson);
+		
+		post("/api/inventory/year/:name", (req, res) -> {
+			List<Object> data = new ArrayList<>();
+			Connection connection = null;
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				String year = req.params(":name");
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where year ='" + year + "'");
+
+				while (rs.next()) {
+					Map<String, Object> car = new HashMap<>();
+					
+					car.put("id", rs.getInt("id"));
+					car.put("make", rs.getString("make"));
+					car.put("model", rs.getString("model"));
+					car.put("year", rs.getInt("year"));
+					car.put("bodytype", rs.getString("bodytype"));
+					car.put("price", rs.getInt("price"));
+					car.put("path", rs.getString("path"));
+					data.add(car);				
+				}
+			} catch (Exception e) {
+				data.add("There was an error: " + e);
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			return data;
+		}, gson::toJson);
+		
+		post("/api/inventory/bodytype/:name", (req, res) -> {
+			List<Object> data = new ArrayList<>();
+			Connection connection = null;
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				String bodytype = req.params(":name");
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where bodytype ='" + bodytype + "'");
+
+				while (rs.next()) {
+					Map<String, Object> car = new HashMap<>();
+					
+					car.put("id", rs.getInt("id"));
+					car.put("make", rs.getString("make"));
+					car.put("model", rs.getString("model"));
+					car.put("year", rs.getInt("year"));
+					car.put("bodytype", rs.getString("bodytype"));
+					car.put("price", rs.getInt("price"));
+					car.put("path", rs.getString("path"));
+					data.add(car);				
+				}
+			} catch (Exception e) {
+				data.add("There was an error: " + e);
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			return data;
+		}, gson::toJson);
+		
+		post("/api/inventory/price/:name", (req, res) -> {
+			List<Object> data = new ArrayList<>();
+			Connection connection = null;
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				int price = 5000 * (Integer.parseInt(req.params(":name")) - 1);
+				int lower = price + 1;
+				int higher = price + 5000;
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where price >='" + lower + "' and price <= '" + higher + "'");
 
 				while (rs.next()) {
 					Map<String, Object> car = new HashMap<>();
@@ -151,7 +254,7 @@ public class Main {
 			return new ModelAndView(attributes, "purchase-history.ftl");
 		}, new FreeMarkerEngine());
 
-		post("/change-password", (request, response) -> {
+		get("/change-password", (request, response) -> {
 			Map<String, Object> attributes = new HashMap<>();
 			attributes.put("title", "Change Password");
 			Connection connection = null;

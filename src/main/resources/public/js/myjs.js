@@ -32,11 +32,17 @@ $(document).ready(function(){
     	$("#age").hide();
     	$("#business_category").show();
     	$("#business_income").show();
-    });
-    
-
-    
+    }); 
 });
-
+function search () {
+	var inputs = $("form :input");
+	var obj = $.map(inputs, function(x, y) {
+	    return {
+	        Key: x.name,
+	        Value: $(x).val()
+	    };
+	});
+	console.log(obj);
+}
 
 
