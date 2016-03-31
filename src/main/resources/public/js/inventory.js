@@ -147,3 +147,34 @@ function browseByPrice () {
 	});
 }
 
+function browseByColor () {
+	$.ajax({
+		url : "/api/inventory/xml/color/" + $( "#color" ).val(),
+		type : "get",
+		success : function(result) {
+			$("#inv").html("");
+			console.log(result);
+			cars = result.getElementsByTagName("car");
+			for ( var i = 0; i < cars.length; i++) {
+				$("#inv").prepend(
+						'<div class="row" id="' + cars[i].childNodes[0].firstChild.nodeValue + '">' +
+							'<div class="col-md-7">' +
+								'<a href="/item">' +
+									'<img class="img-responsive img-hover" src="/img/inventory/' + cars[i].childNodes[6].firstChild.nodeValue + '" alt="car picture"> </a>' +
+							'</div>' +
+							'<div class="col-md-5">' +
+								'<h3>' + cars[i].childNodes[1].firstChild.nodeValue + ' ' + cars[i].childNodes[2].firstChild.nodeValue + ' ' + cars[i].childNodes[3].firstChild.nodeValue + '</h3>' +
+								'<h4>$' + cars[i].childNodes[5].firstChild.nodeValue + '</h4>' +
+								'<h4>' + cars[i].childNodes[4].firstChild.nodeValue + '</h4>' +
+								'<a class="btn btn-primary" href="/item">View Details</a>' +
+							'</div>' +
+						'</div>' +
+						'<hr>'
+				);
+			}
+		}
+	});
+}
+
+
+

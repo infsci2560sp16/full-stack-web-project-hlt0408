@@ -74,6 +74,14 @@
 										<option value="Sedan">Sedan</option>
 									</select>
 								</li>
+								<li>
+									<select class="form-control" id="color" onchange="browseByColor()">
+										<option value="">Color</option>
+										<option value="black">Black</option>
+										<option value="white">White</option>
+										<option value="brown">Brown</option>
+									</select>
+								</li>
 							</ul>
 						</nav>
 						<div class="col-xs-12 col-sm-10" id="inv"></div>
