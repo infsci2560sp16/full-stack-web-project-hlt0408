@@ -372,6 +372,51 @@ public class Main {
 					}
 			}
 		}, new FreeMarkerEngine());
+		
+		get("/api/inventory/xml/price/:name", (req, res) -> {
+			Connection connection = null;
+			Map<String, Object> attributes = new HashMap<>();
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				int price = 5000 * (Integer.parseInt(req.params(":name")) - 1);
+				int lower = price + 1;
+				int higher = price + 5000;
+				ResultSet rs = stmt.executeQuery("SELECT * FROM cars where price >='" + lower + "' and price <= '" + higher + "'");
+
+				
+				String xml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";                                                				
+				xml += "<inventory>";
+				while (rs.next()) {
+					xml += "<car>";
+						xml += "<id>" + rs.getInt("id") + "</id>";
+						xml += "<make>" + rs.getString("make") + "</make>";	
+						xml += "<model>" + rs.getString("model") + "</model>";
+						xml += "<year>" + rs.getInt("year") + "</year>";		
+						xml += "<bodytype>" + rs.getString("bodytype") + "</bodytype>";
+						xml += "<price>" + rs.getInt("price") + "</price>";		
+						xml += "<path>" + rs.getString("path") + "</path>";
+						xml += "<cylinder>" + 4 + "</cylinder>";		
+						xml += "<fuel>" + "gas" + "</fuel>";
+						xml += "<excolor>" + "black" + "</excolor>";		
+					xml += "</car>";				
+				}
+				xml += "</inventory>";
+				System.out.println(xml);
+				res.type("text/xml");
+				return xml;
+			} catch (Exception e) {
+				attributes.put("message", "There was an error: " + e);
+				return attributes;
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+			
+		});
 	}
 
 }
